@@ -25,6 +25,18 @@ ActiveRecord::Schema.define(version: 2022_06_14_130220) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end 
+  
+    create_table "dogs", force: :cascade do |t|
+    t.string "name"
+    t.datetime "birth_date"
+    t.text "description"
+    t.string "image"
+    t.boolean "vaccine"
+    t.boolean "lof"
+    t.boolean "reward"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
